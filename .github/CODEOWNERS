@@ -6,3 +6,7 @@ scripts/ @pbakaus
 
 # Source content (skills & commands)
 source/ @pbakaus
+
+# TLC 4.5 governance ownership
+/.governance/tlc/ @MichaelSaucier
+/.github/workflows/tlc-4.5.yml @MichaelSaucier
