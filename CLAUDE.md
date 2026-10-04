@@ -381,3 +381,13 @@ The eval runners read this repo's skill from `../impeccable/skill/` and staged p
 ### After structural skill changes, update `inline-skill.ts` in the evals repo
 
 The harness inlines `SKILL.md` into the system prompt for "skill-on", stripping sections irrelevant to an API-driven craft run. The stripped list in `runner/inline-skill.ts` needs to stay in sync with `SKILL.md`'s top-level `##` headings. As of v3.0, it should strip `## Setup (non-optional)` (was `## Context Gathering Protocol`), `## Commands` (was `## Command Router`), and `## Pin / Unpin`. Keep `## Shared design laws`. If you add or rename a top-level section, update the strip list there.
+
+## Transpara TLC workflow
+
+For software changes in this transpara-ai repository, use the host-installed
+`transpara-tlc` plugin's `tlc` skill. Default to Routine and escalate only under
+its route rules. The canonical source is [transpara-ai/tlc](https://github.com/transpara-ai/tlc).
+
+TLC is an external, unpinned developer dependency. Host maintainers install and
+update it; repository configuration does not pin, install, enable, or copy the
+workflow. Preserve the project-specific instructions and verification above.
